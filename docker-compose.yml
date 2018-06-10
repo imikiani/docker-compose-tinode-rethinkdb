@@ -1,0 +1,20 @@
+
+version: "3"
+
+services:
+
+  db:
+    image: rethinkdb:2.3
+    volumes:
+      - "./data:/data"  
+
+  server:
+    build: .
+    volumes: 
+      - "./tinode/chat/server:/go/src/tinode/chat/server"
+      - "./tinode/chat/tinode-db:/go/src/tinode/chat/tinode-db"
+      - "./tinode/example-react-js:/web/example-react-js"
+    depends_on: 
+      - db
+    ports:
+      - "6060:6060"
