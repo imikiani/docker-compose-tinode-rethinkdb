@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "\nWaiting for building and setting up the Tinode server...\n"
+echo "\nWaiting for building and setting up the Tinode server...\nIt may take a few minutes.\n"
 
 # Install tinode server from mounted directory
 go get -tags rethinkdb tinode/chat/server
