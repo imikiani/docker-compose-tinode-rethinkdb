@@ -1,0 +1,5 @@
+# Ignores rethink's shared data
+data
+
+# Ignores tinode folder which you will add manually beside docker-compose.yml
+tinode
